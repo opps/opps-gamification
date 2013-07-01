@@ -4,10 +4,12 @@ from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
 from opps.core.models import Publishable, Slugged
+from opps.archives.models import get_file_path
 
 
 class Badge(Publishable, Slugged):
     name = models.CharField(_(u"Name"), max_length=140, db_index=True)
+    archive = models.FileField(upload_to=get_file_path, max_length=255)
 
     class Meta:
         verbose_name = _("Badge")
