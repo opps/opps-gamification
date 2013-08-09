@@ -1,0 +1,8 @@
+[main]
+host = https://www.transifex.com
+
+[opps-gamification.gamification]
+file_filter = opps/gamification/locale/<lang>/LC_MESSAGES/django.po
+source_file = opps/gamification/locale/en/LC_MESSAGES/django.po
+source_lang = en
+
